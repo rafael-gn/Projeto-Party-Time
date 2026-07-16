@@ -1,9 +1,15 @@
+import {Outlet} from "react-router-dom"
+
+//Components
+import NavBar from "./components/Navbar.jsx"
+
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <h1>Party Time</h1>
+      <NavBar/>
+      <Outlet/>
     </div>
   )
 }
