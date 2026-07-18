@@ -45,7 +45,7 @@ const Party = () => {
     return <div className="party">
         <h1>{party.title}</h1>
         <div className="actions-container">
-            <Link className="btn">Editar</Link>
+            <Link className="btn" to={`/party/edit/${id}`}>Editar</Link>
             <button className="btn-secondary" onClick={handleDelete}>Excluir</button>
         </div>
         <p>Orçamento: R${party.budget}</p>
