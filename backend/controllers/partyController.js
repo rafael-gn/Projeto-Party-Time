@@ -22,7 +22,10 @@ const partyController = {
         services: req.body.services,
       };
 
-      c
+      if (party.services && !checkPartyBudget(party.budget, party.services)) {
+        res.status(406).json({ msg: "O seu orçamento é insuficiente!" });
+        return;
+      }
 
       const response = await PartyModel.create(party);
 
